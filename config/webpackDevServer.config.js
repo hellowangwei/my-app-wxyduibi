@@ -11,9 +11,8 @@ const httpProxy = require('http-proxy-middleware');
 
 const context = [`/api/*`,'/entry_task/*'];
 const options = {
-    // target: 'http://qa.newssqmis.knowbox.cn/api/',
-    // target: 'http://newssqmis.knowbox.cn/api/',
-    target: 'http://entrystore_susuan.test.knowbox.cn/',
+    target: 'http://similar.test.knowbox.cn:80',
+
     changeOrigin: true,
     pathRewrite: {
         '^/api': '/'

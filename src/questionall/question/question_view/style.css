@@ -1,0 +1,381 @@
+.question-num {
+    width: 5%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.question-con {
+    width: 95%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.item-list {
+    width: 95%;
+    margin-left: 5%;
+}
+
+.item-list .item {
+    margin: 6px 0;
+    font-size: 18px;
+}
+
+.math_text, .math_guide, .math_category, .math_audio, .math_picture {
+    margin: 6px 0;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.img_fillin_express, .img_fillin_letter, .img_fillin_line {
+    width: auto;
+    height: 24px;
+    vertical-align: middle;
+    margin: 0 5px;
+}
+
+.ti_knowbox_question_smaller_image {
+    max-height: 3rem;
+    vertical-align: middle;
+    display: inline-block;
+    width: auto;
+    font-size: 14px;
+}
+
+.ti_knowbox_question_middle_image {
+    max-height: 90px;
+    vertical-align: middle;
+    display: inline-block;
+    width: auto;
+    font-size: 14px;
+}
+
+.ti_knowbox_question_bigger_image {
+    max-width: 100%;
+    margin: 0 auto;
+    vertical-align: middle;
+    display: block;
+    width: auto;
+}
+
+/* 分类题 */
+.category-item {
+    display: inline-block;
+    background: #ffffff;
+    padding: 5px 30px;
+    border: 1px solid #e5ebf1;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    vertical-align: top;
+    line-height: 1.5;
+}
+
+.category-item.correct {
+    border-color: #00b1ff;
+}
+
+.category-item.wrong {
+    border-color: #fc5364;
+}
+
+.math_category_con {
+    display: inline-block;
+    line-height: 28px;
+    vertical-align: top;
+    margin-right: 10px;
+}
+
+.math_category_box {
+    display: inline-block;
+    width: 220px;
+    height: 28px;
+    vertical-align: top;
+    border: 2px solid #e4e9f3;
+    border-radius: 2px;
+}
+
+/* 连线题 */
+.line-item {
+    border: 2px solid #e3ebf3;
+    border-radius: 2px;
+    text-align: center;
+    padding: 8px 30px;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+audio.math_reading {
+    width: 400px;
+}
+.audiojs audio{
+    display: none;
+}
+.mis_smaller_image {
+    max-height: 3rem;
+    margin: 0.02rem;
+    vertical-align: middle;
+    display: inline-block;
+    width: auto;
+    font-size: 14px;
+}
+
+.mis_bigger_image {
+    margin: 0.15rem auto;
+    max-width: 100%;
+    /*max-width: 680px;*/
+    /*max-height: 185px;*/
+    vertical-align: middle;
+    display: block;
+    width: auto;
+}
+.mis_middle_image {
+    max-width: 340px;
+}
+
+.box-exercise {
+    border: 1px solid #e9edf6;
+    cursor: pointer;
+    transition: border .3s;
+}
+
+.box-exercise-stage {
+    border-bottom: 1px solid #e9edf6;
+}
+
+.box-exercise:hover {
+    border-color: #00b1ff;
+    transition: all .3s;
+}
+
+.box-exercise:hover .exercise-footer {
+    border-color: #00b1ff;
+    background: rgba(0, 177, 255, 0.3);
+    transition: all .3s;
+}
+
+.box-exercise:hover .exercise-footer .footer-hide {
+    border-color: #00b1ff;
+    transition: all .3s;
+}
+
+/* exercise content 习题内容 */
+.box-exercise .exercise-content, .box-exercise-stage .exercise-content {
+    padding: 10px 16px;
+    min-height: 210px;
+    padding-right:100px;
+}
+
+.box-exercise .exercise-num, .box-exercise-stage .exercise-num {
+    width: 50px;
+}
+
+.box-exercise .exercise-con, .box-exercise-stage .exercise-con {
+    width: calc(100% - 50px);
+}
+
+.box-exercise .exercise-options, .box-exercise-stage .exercise-options {
+    width: 95%;
+    margin-left: 5%;
+}
+
+.box-exercise .exercise-option, .box-exercise-stage .exercise-option {
+    margin: 6px 1% 6px 0;
+    display: inline-block;
+    vertical-align: top;
+    min-width: 24%;
+    font-size: 18px;
+}
+
+.box-exercise .category-option, .box-exercise-stage .category-option {
+    font-size:12px;
+    display: inline-block;
+    background: #ffffff;
+    padding: 5px 30px;
+    border: 1px solid #e5ebf1;
+    margin-right: 10px;
+    vertical-align: top;
+    line-height: 1.5;
+}
+
+.category-option.correct {
+    border-color: #00b1ff;
+}
+
+.category-option.wrong {
+    border-color: #fc5364;
+}
+
+.math_category_con {
+    font-size:16px;
+    display: inline-block;
+    line-height: 28px;
+    vertical-align: top;
+    margin-right: 10px;
+}
+
+.math_category_box {
+    display: inline-block;
+    width: 220px;
+    height: 28px;
+    vertical-align: top;
+    border: 2px solid #e4e9f3;
+    border-radius: 2px;
+}
+
+/* 连线题 */
+.line-item {
+    border: 2px solid #e3ebf3;
+    border-radius: 2px;
+    text-align: center;
+    padding: 8px 30px;
+    background: #ffffff;
+    margin-bottom: 8px;
+}
+
+.line-item:last-of-type {
+    margin-bottom: 0;
+}
+
+.box-exercise .exercise-num,
+.box-exercise .exercise-con,
+.box-exercise .exercise-option-code,
+.box-exercise .exercise-option-item {
+    display: inline-block;
+    vertical-align: top;
+}
+.exercise-con{
+    font-size: 18px;
+}
+/* exercise footer 习题信息 */
+.box-exercise .exercise-footer, .box-exercise-stage .exercise-footer {
+    padding: 0 30px;
+    background: #f7f8fc;
+    border-top: 1px solid #e9edf6;
+    position: relative;
+    line-height: 48px;
+    transition: all .3s;
+}
+
+.box-exercise-stage .exercise-footer:before, .box-exercise-stage .exercise-footer:after {
+    content: '';
+    position: absolute;
+    left: 55px;
+    width: 20px;
+    height: 20px;
+    border: 10px solid transparent;
+}
+
+.box-exercise-stage .exercise-footer:before {
+    top: -1px;
+    border-top: 10px solid #e9edf6;
+}
+
+.box-exercise-stage .exercise-footer:after {
+    top: -3px;
+    border-top: 10px solid #ffffff;
+}
+
+.exercise-footer .footer-hide {
+    border-bottom: 1px solid #eaedf6;
+    transition: all .3s;
+}
+
+.exercise-footer .footer-show .exercise-btn {
+    border-radius: 8px;
+    padding: 0 15px;
+    height: 30px;
+    line-height: 28px;
+    right: 0;
+    top: 10px;
+    position: absolute;
+    cursor: pointer;
+    font-size: 14px;
+    color: #2fbfff;
+    border: 1px solid #2fbfff;
+}
+
+.math_text, .math_guide, .math_category, .math_audio, .math_picture {
+    margin: 6px 0;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.img_fillin_express, .img_fillin_letter, .img_fillin_line {
+    width: auto;
+    height: 24px;
+    vertical-align: middle;
+    margin: 0 5px;
+}
+
+.box-exercise-smaller-image, .box-exercise-middle-image, .box-exercise-bigger-image {
+    vertical-align: middle;
+    display: inline-block;
+    height: auto;
+}
+
+.box-exercise-smaller-image {
+    max-width: 44px;
+}
+
+.box-exercise-middle-image {
+    max-width: 340px;
+}
+
+.box-exercise-bigger-image {
+    max-width: 340px;
+}
+
+.box-exercise .exercise-option .box-exercise-smaller-image,
+.box-exercise .exercise-option .box-exercise-middle-image,
+.box-exercise .exercise-option .box-exercise-bigger-image {
+    max-width: 170px;
+}
+
+.box-exercise-small-category-image,
+.box-exercise-mid-category-image,
+.box-exercise-big-category-image {
+    height: 60px;
+}
+
+.box-exercise-small-match-image,
+.box-exercise-mid-match-image,
+.box-exercise-big-match-image {
+    max-width: 170px;
+}
+
+.stage-tag {
+    font-size:16px;
+    line-height: 32px;
+    display: inline-block;
+    padding-left: 13px;
+    background: url(http://knowapp.b0.upaiyun.com/ss/pcSide/tag-small.png) center center no-repeat;
+    color: rgb(255, 255, 255);
+    height: 30px;
+    width: 104px;
+    margin-bottom: 10px;
+}
+.stage-tag-small {
+    font-size:14px;
+    line-height: 22px;
+    display: inline-block;
+    padding-left: 6px;
+    background: rgb(76,176,248);
+    color: rgb(255, 255, 255);
+    height: 20px;
+    width: 74px;
+    margin-bottom: 10px;
+}
+
+.inline-block {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.relative {
+    position: relative;
+}
+.footer-show.relative {
+    padding-right: 90px;
+}
+.footer-show span{
+     display: inline-block;
+ }
