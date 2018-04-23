@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Tag} from 'antd';
-// import audiojs from 'audiojs';
+import audiojs from 'audiojs';
 import * as Types from './../../../utils/questionType'
 import './style.css'
 
@@ -24,15 +24,20 @@ class Question extends Component {
     }
 
     componentDidUpdate() {
-        // audiojs.createAll();
+        audiojs.createAll();
     }
     render() {
+
         const {data = {},num=1,errorAnswer} = this.props;
         data.id = data.question_id;
         data.rate = data.right_rate
         let page = this.props.current
         if(!page){page = 1}
         let v = data
+        v.type_show=v.show_type
+        v.stem=v.question
+        v.answer=v.right_answer
+        v.item_list=[]
         return (
             <div>
 

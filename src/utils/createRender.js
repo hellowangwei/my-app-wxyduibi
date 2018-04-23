@@ -319,6 +319,9 @@ function replaceCommonJsonToTag (str,edit) {
 *
 * */
 function getExplain(str) {
+    if(!str){
+        return '';
+    }
     if(str.length < 1){
         return '';
     }

@@ -9,7 +9,7 @@ const paths = require('./paths');
 
 const httpProxy = require('http-proxy-middleware');
 
-const context = [`/api/*`,'/entry_task/*'];
+const context = [`/api/*`];
 const options = {
     target: 'http://similar.test.knowbox.cn:80',
 

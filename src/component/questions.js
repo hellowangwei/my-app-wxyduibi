@@ -106,24 +106,40 @@ class ImageView extends Component {
             }
 
     }
+    onSearch=()=>{
+        this.getList();
+    }
     render() {
         const {page,token,images,pagination,questions,loading,imgList} = this.state
-        console.log(images)
+        console.log(questions)
         return (
             <div style={{minWidth:1250,margin:'0 auto',padding:'20px'}}>
                 <div>
+                    <span style={{marginRight:30}}>
+                        <label style={{width:'90px',display:'inline-block'}} htmlFor="search_type">min_rate：</label>
                     <Input
-                        placeholder="输入关键字"
-                        style={{width:220,marginRight:10}}
-                        value={this.state.search}
-                        onChange={(e)=>this.setState({search:e.target.value})}
+                        placeholder="输入min_rate"
+                        style={{width:220,marginRight:5}}
+                        value={this.state.min_rate}
+                        onChange={(e)=>this.setState({min_rate:e.target.value})}
 
                     />
-                    <Button style={{fontSize: 12,marginRight:'120px'}} type="primary" onClick={this.onSearch}>搜索</Button>
+                    </span>
 
-                    <label style={{width:'70px',display:'inline-block'}} htmlFor="search_type">尺寸筛选 ：</label>
-                    <Select value={this.state.filter} style={{ width: 120 }} onChange={this.filter} id="search_type">
-                        <Option value="0">全部</Option>
+                    <span style={{marginRight:30}}>
+                        <label style={{width:'90px',display:'inline-block'}} htmlFor="search_type">max_rate ：</label>
+                    <Input
+                        placeholder="输入max_rate"
+                        style={{width:220,marginRight:5}}
+                        value={this.state.max_rate}
+                        onChange={(e)=>this.setState({max_rate:e.target.value})}
+
+                    />
+                    </span>
+                    <span style={{marginRight:30}}>
+                    <label style={{width:'90px',display:'inline-block'}} htmlFor="search_type">题型筛选 ：</label>
+                    <Select value={this.state.type} style={{ width: 120 }} onChange={(val)=>{this.setState({type:val})}} id="search_type">
+                        <Option value="all">全部</Option>
 
                         {
                             Object.keys(TYPE_MAP).map((k)=>
@@ -132,7 +148,9 @@ class ImageView extends Component {
                         }
 
                     </Select>
+                    </span>
 
+                    <Button style={{fontSize: 12,marginRight:'120px'}} type="primary" onClick={this.onSearch}>搜索</Button>
                 </div>
 
                 <div style={{marginTop:'50px',fontSize:'17px',color:'#888'}}>
@@ -146,10 +164,13 @@ class ImageView extends Component {
                                     </h3>
                                 </div>
                                 <div>
-                                    <Col span={12}>
+                                    <Col span={12} style={{padding:8}}>
                                         <Question data={d.question_1} />
                                     </Col>
-                                    <Col span={12}></Col>
+                                    <Col span={12} style={{padding:8}}>
+                                        <Question data={d.question_2} />
+                                    </Col>
+                                    <div style={{clear:'both'}}></div>
                                 </div>
 
                             </div>
@@ -167,7 +188,7 @@ class ImageView extends Component {
                                 showQuickJumper
                                 pageSize={+20}
                                 // showSizeChanger
-                                total={pagination.total_questions}
+                                total={pagination.total_items}
                                 onChange={ this.pageChange }
                                 // onShowSizeChange = { this.onShowSizeChange }
                                 current={page}

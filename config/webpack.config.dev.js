@@ -73,6 +73,7 @@ module.exports = {
   entry: finalEntries,
   output: {
     // Add /* filename */ comments to generated require()s in the output.
+      path: paths.appBuild,
     pathinfo: true,
     // This does not produce a real file. It's just the virtual path that is
     // served by WebpackDevServer in development. This is the JS bundle
@@ -91,7 +92,7 @@ module.exports = {
     $:'jQuery',
     jQuery: "jQuery",
     UM:'UM',
-    // audiojs:'audiojs',
+    audiojs:'audiojs',
   },
   resolve: {
     // This allows you to set a fallback for where Webpack should look for modules.
@@ -279,23 +280,7 @@ module.exports = {
       // Make sure to add the new loader(s) before the "file" loader.
     ],
   },
-  plugins: [
-    new InterpolateHtmlPlugin(env.raw),
-    // Generates an `index.html` file with the <script> injected.
-    new HtmlWebpackPlugin({
-      inject: true,
-      template: paths.appHtml,
-    }),
-    new webpack.NamedModulesPlugin(),
-    new webpack.DefinePlugin(env.stringified),
-    new webpack.HotModuleReplacementPlugin(),
-
-    new CaseSensitivePathsPlugin(),
-
-    new WatchMissingNodeModulesPlugin(paths.appNodeModules),
-
-    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
-  ],
+  plugins: plugins,
   // Some libraries import Node modules but don't use them in the browser.
   // Tell Webpack to provide empty mocks for them so importing them works.
   node: {
